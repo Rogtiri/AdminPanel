@@ -1,0 +1,49 @@
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
+logs/
+
+# Environment variables
+
+.env
+.env.local
+.env.*.local
+
+# Dependency directories
+
+node_modules/
+vendor/
+
+# Build / compiled files
+
+dist/
+build/
+out/
+
+# IDE / editors
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+
+tmp/
+temp/
+*.tmp
+
+# Cache
+
+.cache/
+
+# System files
+
+*.pid
+*.seed
+*.pid.lock

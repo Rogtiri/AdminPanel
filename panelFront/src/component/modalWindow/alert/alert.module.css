@@ -1,0 +1,54 @@
+.modalActive {
+  position: fixed;
+  display: flex;
+  bottom: 30px;
+  left: 40vw;
+  justify-content: bottom;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.alertSucces, .alertWorning, .alertError{
+    background-color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 12px;
+    width: max-content;
+    height: max-content;
+    animation: slideDown 0.3s ease-in-out;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.alertSucces{
+    border: 4px solid #19c913;
+    box-shadow: 0 8px 20px rgba(7, 230, 81, 0.438);
+}
+.alertWorning{
+    border: 4px solid #ebaf09;
+    box-shadow: 0 8px 20px rgba(230, 178, 7, 0.438);
+}
+.alertError{
+    border: 4px solid #e60f0f;
+    box-shadow: 0 8px 20px rgba(230, 7, 37, 0.438);
+}
+
+.agree, .cancel{
+    padding: 10px 25px;
+    margin: 15px 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

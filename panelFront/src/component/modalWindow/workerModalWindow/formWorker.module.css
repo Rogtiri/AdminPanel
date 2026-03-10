@@ -1,0 +1,93 @@
+/* Фон модального окна */
+.modalActive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.modalContent{
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 25vw;
+  max-height: 100vh;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  border: 4px solid black;
+}
+
+.closeIcon{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Інпут і лейбл разом */
+.editPole{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+/* Тільки інпут */
+.edidContentPole {
+  display: inline-block;
+  width: auto;         
+  min-width: 80px;        
+  max-width: 100%;         
+  padding: 4px 8px;        
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box; 
+}
+.edidContentPole:focus {
+  outline: none; /* убираем стандартный синий контур браузера */
+  border: 2px solid #9b1184; /* синяя обводка */
+  box-shadow: 0 0 5px rgba(161, 16, 130, 0.5); /* легкая тень */
+  transition: border 0.2s, box-shadow 0.2s;
+  background-color: #f0f8ff; /* легкий фон, опционально */
+}
+
+.btnSendWorkerInfo{
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    align-self: self-start;
+    transition: background-color 0.2s;
+}
+
+.btnSendWorkerInfo:hover {
+  background-color: #388e3c;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

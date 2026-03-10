@@ -1,0 +1,214 @@
+.App{
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  /* box-sizing: border-box; */
+}
+
+
+/* ===== БАЗА ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+
+
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== БОКОВЕ МЕНЮ ===== */
+.sidebar {
+  width: 240px;
+  background: #2c2b2b;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-title {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* ===== КНОПКИ ===== */
+.nav-btn {
+  background: #3d3b3b;
+  border: 1px solid transparent;
+  color: #ddd;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #4a4646;
+  color: #fff;
+}
+
+.nav-btn.active {
+  background: #fff;
+  color: #7b1fa2;
+  border: 2px solid #9c27b0;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
+  position: relative;
+}
+
+.nav-btn.active::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  border-radius: 4px;
+  background: #9c27b0;
+  box-shadow: 0 0 8px rgba(156, 39, 176, 0.5);
+}
+
+/* ===== КОНТЕНТ ===== */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* Тонкий скрол */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+.content::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+.content::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== КАЛЕНДАРЬ (широкий и адаптивный) ===== */
+.react-calendar {
+  
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px 40px;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Навигация */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.react-calendar__navigation button {
+  color: #4b5563;
+  font-size: 16px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Сетка дней */
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.react-calendar__tile {
+  border-radius: 10px;
+  padding: 15px 0;
+  font-size: 15px;
+  color: #374151;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.02);
+}
+
+/* Сегодня */
+.react-calendar__tile--now {
+  background-color: #eef2ff;
+  color: #4338ca;
+  font-weight: 600;
+}
+
+/* Активная дата */
+.react-calendar__tile--active {
+  background-color: #6366f1;
+  color: white;
+  font-weight: 600;
+}
+
+/* Скрываем границы соседних месяцев */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #d1d5db;
+}
+
+/* Дни недели */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Плавное появление */
+.react-calendar {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
