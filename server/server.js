@@ -12,7 +12,7 @@ const __dirname = path.resolve()
 dotenv.config()
 // app.use(express.static(path.join(__dirname, '../panelFront/build')))
 // app.use(express.static(path.join(__dirname, 'build')))
-app.use(cors({origin: 'https://admin-panel-8fq2.vercel.app',
+app.use(cors({origin: `${process.env.FRONT}`,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
