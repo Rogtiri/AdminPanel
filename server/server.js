@@ -29,7 +29,7 @@ const start = async () => {
         await mongoose.connect(URI, {
             dbName: 'Neoma'
         })
-        app.listen(8000, () => {
+        app.listen(process.env.PORT || 8080, () => {
             console.log('server start')
         })
     } catch (error) {
