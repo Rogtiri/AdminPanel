@@ -40,7 +40,7 @@ const Worker = ({pageStatus}) => {
   const showWorker = async () => {
     try {
       if(!filterData){
-        const takeWorker = await fetch(`/api/worker/takeWorker?page=${currentPage}`)
+        const takeWorker = await fetch(`${process.env.REACT_APP_API_URL}/api/worker/takeWorker?page=${currentPage}`)
         const result = await takeWorker.json()
 
         setWorker(result.allWorker)
@@ -50,7 +50,7 @@ const Worker = ({pageStatus}) => {
        // Отримання працівника по даті
       const filterBody = filterData.toLocaleDateString("en-CA")
 
-      const findForData = await fetch(`/api/worker/findForData?page=${currentPage}`, {
+      const findForData = await fetch(`${process.env.REACT_APP_API_URL}/api/worker/findForData?page=${currentPage}`, {
           method: 'POST',
           headers: {
           'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ const Worker = ({pageStatus}) => {
           if(filterData){
             bodyObj.filterDate = filterData.toLocaleDateString("en-CA")
           }
-          const res = await fetch(`/api/worker/searchWorker?page=${currentPage}`, {
+          const res = await fetch(`${process.env.REACT_APP_API_URL}/api/worker/searchWorker?page=${currentPage}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(bodyObj)

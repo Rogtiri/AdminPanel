@@ -39,7 +39,7 @@ const Orders = ({pageStatus}) => {
           if(filter){
             obj.filterBody = filter
           }
-          const res = await fetch(`/api/take/searchOrder?page=${currentPage}`, {
+          const res = await fetch(`${process.env.REACT_APP_API_URL}/api/take/searchOrder?page=${currentPage}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(obj)

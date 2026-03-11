@@ -21,7 +21,7 @@ const FormWorker = ({setFormWorker, formWorker, showWorker, showAlert,
 
     const addNewWorker = async () => {
         try {
-            const response = await fetch('/api/worker/addNewWorker', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/worker/addNewWorker`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json'

@@ -43,9 +43,9 @@ setFormWorker, page, setSearchResult
                 bodyObj[type].filterBody = filter
             }
             const config = {
-                orders: {url: `/api/take/searchOrder?page=${page}`, body: bodyObj[type]},
-                workers: {url: `/api/worker/searchWorker?page=${page}`, body: bodyObj[type]},
-                archive: {url: `/api/worker/searchWorker?page=${page}`, body: {query: text, status: 'Архів'}}
+                orders: {url: `${process.env.REACT_APP_API_URL}/api/take/searchOrder?page=${page}`, body: bodyObj[type]},
+                workers: {url: `${process.env.REACT_APP_API_URL}/api/worker/searchWorker?page=${page}`, body: bodyObj[type]},
+                archive: {url: `${process.env.REACT_APP_API_URL}/api/worker/searchWorker?page=${page}`, body: {query: text, status: 'Архів'}}
             }
 
             const {url, body} = config[type] || {}

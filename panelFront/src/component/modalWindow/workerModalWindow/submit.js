@@ -11,15 +11,15 @@ const Submit = ({isOpen, onClose, workerId, refresh, setShowAlert, pageStatus,
         let url, method
         switch(action){
           case 'delete':
-            url = `/api/worker/deleteWorker/${workerId}`
+            url = `${process.env.REACT_APP_API_URL}/api/worker/deleteWorker/${workerId}`
             method = 'DELETE'
             break;
           case 'extend':
-            url = `/api/worker/inWork/${workerId}`
+            url = `${process.env.REACT_APP_API_URL}/api/worker/inWork/${workerId}`
             method = 'POST'
             break;
           case 'archive':
-            url = `/api/worker/inArhive/${workerId}`
+            url = `${process.env.REACT_APP_API_URL}/api/worker/inArhive/${workerId}`
             method = 'POST'
             break;
         }

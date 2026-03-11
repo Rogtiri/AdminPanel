@@ -32,9 +32,9 @@ const ViewWindow = ({active, setActive, id, pageStatus}) => {
       return
     }
     const config = {
-      orders: {url: `/api/take/takeOrderForEdit?idOrder=${id}`},
-      workers: {url: `/api/worker/takeWorkerForEdit?idWorker=${id}`},
-      archive: {url: `/api/worker/takeWorkerForEdit?idWorker=${id}`}
+      orders: {url: `${process.env.REACT_APP_API_URL}/api/take/takeOrderForEdit?idOrder=${id}`},
+      workers: {url: `${process.env.REACT_APP_API_URL}/api/worker/takeWorkerForEdit?idWorker=${id}`},
+      archive: {url: `${process.env.REACT_APP_API_URL}/api/worker/takeWorkerForEdit?idWorker=${id}`}
     }
     const url = config[pageStatus]?.url
     if (!url) return;

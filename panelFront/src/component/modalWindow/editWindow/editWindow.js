@@ -3,6 +3,7 @@ import style from './editWindow.module.css';
 import { IoIosClose } from "react-icons/io";
 import Alert from '../alert/alert';
 
+
 const EditWindow = ({ active, setActive, id, updateTable, pageStatus }) => {
   const [editOrder, setEditOrder] = useState({
     typeProject: '',
@@ -34,8 +35,8 @@ const EditWindow = ({ active, setActive, id, updateTable, pageStatus }) => {
   useEffect(() => {
     if (!id) return
     const config = {
-      orders: {url: `/api/take/takeOrderForEdit?idOrder=${id}`},
-      workers: {url: `/api/worker/takeWorkerForEdit?idWorker=${id}`}
+      orders: {url: `${process.env.REACT_APP_API_URL}/api/take/takeOrderForEdit?idOrder=${id}`},
+      workers: {url: `${process.env.REACT_APP_API_URL}/api/worker/takeWorkerForEdit?idWorker=${id}`}
     }
     const url = config[pageStatus]?.url
     if (!url) return;

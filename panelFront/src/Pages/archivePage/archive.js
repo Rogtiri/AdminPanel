@@ -30,7 +30,7 @@ const Archive = ({pageStatus}) => {
 
   const showWorkerArhive = useCallback(async () => {
     try {
-      const takeWorkerArhive = await fetch(`/api/worker/takeArhiveWorker?page=${currentPage}`)
+      const takeWorkerArhive = await fetch(`${process.env.REACT_APP_API_URL}/api/worker/takeArhiveWorker?page=${currentPage}`)
       const result = await takeWorkerArhive.json()
 
       setWorkerArhive(result.arhiveWorker)
@@ -48,7 +48,7 @@ const Archive = ({pageStatus}) => {
             query: searchQuery,
             status: "Архів"
           }
-          const res = await fetch(`/api/worker/searchWorker?page=${currentPage}`, {
+          const res = await fetch(`${process.env.REACT_APP_API_URL}/api/worker/searchWorker?page=${currentPage}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(bodyObj)
