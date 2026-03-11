@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import style from './archive.module.css'
 import Submit from '../../component/modalWindow/workerModalWindow/submit'
 import Search from '../../component/search/search'
@@ -28,7 +28,7 @@ const Archive = ({pageStatus}) => {
 
 
 
-  const showWorkerArhive = async () => {
+  const showWorkerArhive = useCallback(async () => {
     try {
       const takeWorkerArhive = await fetch(`/api/worker/takeArhiveWorker?page=${currentPage}`)
       const result = await takeWorkerArhive.json()
@@ -38,7 +38,7 @@ const Archive = ({pageStatus}) => {
     } catch (error) {
       
     }
-  }
+  }, [currentPage])
 
   useEffect(() => {
     if(searchQuery){
@@ -64,7 +64,7 @@ const Archive = ({pageStatus}) => {
     } else {
       showWorkerArhive()
     }
-  }, [currentPage, searchQuery])
+  }, [currentPage, searchQuery, showWorkerArhive])
 
   
   return (
