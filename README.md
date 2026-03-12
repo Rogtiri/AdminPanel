@@ -58,78 +58,70 @@ Ensure all environment variables are set in:
 
 ## 🛠️ Running Separately
 
-### 💻 Frontend
-1. Navigate to: `cd panelFront/`
+## 💻 Frontend
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd panelFront/
+
+2. Install dependencies:  
+   ```bash
+   npm install
+3. Run the frontend:
+    ```bash
+   npm start
+
+## ⚙️ Backend
+
+1. Navigate to the backend directory:
+   ```bash
+   cd server/
 2. Install dependencies:
    ```bash
    npm install
-
-    Run the frontend:
-    Bash
-
-    npm start
-
-⚙️ Backend
-
-    Navigate to: cd server/
-
-    Install dependencies:
-    Bash
-
-    npm install
-
-    Run the backend:
-
-        In development: npm run dev
-
-        In production: npm start
+3. Run the backend:  
+   - In development mode (with hot-reload):`npm run dev`  
+   - In production mode (for deployment):`npm start`  
 
 
-📁 Features
-Frontend
+## 📁 Features
+---
+### Frontend
 
-    ✅ Admin dashboard UI
+✅ Admin dashboard UI  
+✅ Authentication  
+✅ API integration  
+✅ Navigation between pages  
 
-    ✅ Authentication
+---
+### Backend
 
-    ✅ API integration
+✅ REST API  
+✅ Authentication & authorization routes  
+✅ CRUD operations on data  
+(Add more specific functionality as needed based on your code)  
 
-    ✅ Navigation between pages
+---
+## 📦 Technologies
 
-Backend
+- Node.js
+- Express (Backend)
+- React / Vue / інше (Frontend)
+- Docker & Docker-Compose
 
-    ✅ REST API
+---
+## 👥 Contributing 
 
-    ✅ Authentication & authorization routes
+- Fork the repository
+- Create your branch:`git checkout -b feature/awesome-feature`
+- Commit your changes:`git commit -m 'Add some awesome feature`
+- Push to the branch:`git push origin feature/awesome-feature`
+- Open a Pull Request and wait for review
 
-    ✅ CRUD operations on data
-    (Add more specific functionality as needed based on your code)
+---
+## 📜 License
+Specify your project license here (MIT, Apache, etc.).
 
-📦 Technologies
-
-    Node.js
-
-    Express (Backend)
-
-    React / Vue / other (Frontend)
-
-    Docker & Docker-Compose
-
-👥 Contributing
-
-    Fork the repository
-
-    Create your branch: git checkout -b feature/awesome-feature
-
-    Commit your changes: git commit -m 'Add some awesome feature'
-
-    Push to the branch: git push origin feature/awesome-feature
-
-    Open a Pull Request and wait for review
-
-📜 License
-
-Specify your project license here (MIT, Apache, etc.)
-❤️ Support
-
-If you have questions, open an issue or contact the project maintainer.
+---
+## ❤️ Support (Підтримка)
+If you have any questions, feel free to open an issue or contact the project maintainer directly.
