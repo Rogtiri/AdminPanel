@@ -7,6 +7,7 @@ The frontend provides the user interface for admins, while the backend handles A
 
 You can run the project locally using **Docker & Docker-Compose** or run each part separately.
 
+👉Live demo: https://admin-panel-virid-chi.vercel.app/
 ---
 
 ## 🧱 Project Structure
