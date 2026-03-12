@@ -13,7 +13,10 @@ dotenv.config()
 // app.use(express.static(path.join(__dirname, '../panelFront/build')))
 // app.use(express.static(path.join(__dirname, 'build')))
 // `${process.env.FRONT}`
-app.use(cors({origin: 'https://admin-panel-virid-chi.vercel.app/',
+app.use(cors({origin: [
+    'http://localhost:3000',
+    'https://admin-panel-virid-chi.vercel.app'
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
