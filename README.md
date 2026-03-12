@@ -12,10 +12,10 @@ You can run the project locally using **Docker & Docker-Compose** or run each pa
 
 ## 🧱 Project Structure
 
-├── panelFront/ # Frontend (UI)
-├── server/ # Backend API
-├── docker-compose.yml
-├── README.md
+├── panelFront/ # Frontend (UI)  
+├── server/ # Backend API  
+├── docker-compose.yml  
+├── README.md  
 
 
 ---
