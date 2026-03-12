@@ -27,14 +27,15 @@ app.use('/api/worker', routWorker)
 
 
 const URI = process.env.URI
+const PORT = process.env.PORT || 8080
 
 const start = async () => {
     try {
         await mongoose.connect(URI, {
             dbName: 'Neoma'
         })
-        app.listen(process.env.PORT || 8080, () => {
-            console.log('server start')
+        app.listen(PORT, "0.0.0.0", () => {
+            console.log(`Server running on ${PORT}`)
         })
     } catch (error) {
         console.log(`ERROR: ${error}`)
